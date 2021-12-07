@@ -1,21 +1,24 @@
 package comunicacion;
-import java.util.*;
+//import java.util.*;
 
 public class Tesis extends Escrito{
 	private String idea;
-	private static ArrayList <String> argumentos = new ArrayList<String>();
+	//private static ArrayList <String> argumentos = new ArrayList<String>();
+	String argumentos []=new String[2];
 	private String conclusion;
 	private String referencias;
 	private String interpretacion;
-	public Tesis(String origen, String titulo, String autor, int paginas, String idea, String conclusion,
-			String referencias, String interpretacion) {
+
+	public Tesis(String origen, String titulo, String autor, int paginas, String idea, String[] argumentos,
+			String conclusion, String referencias, String interpretacion) {
 		super(origen, titulo, autor, paginas);
 		this.idea = idea;
+		this.argumentos = argumentos;
 		this.conclusion = conclusion;
 		this.referencias = referencias;
 		this.interpretacion = interpretacion;
 	}
-	
+
 	public int palabrasTotales(int palabrasPagina) {
 		return this.getPaginas()*5;
 	}
@@ -30,7 +33,7 @@ public class Tesis extends Escrito{
 		r += this.getAutor() + "\n";
 		r += this.getPaginas()+ "\n";
 		r += this.idea+ "\n";
-		r += Tesis.argumentos.size()+ "\n";
+		r += argumentos.length+ "\n";
 		r += this.conclusion+ "\n";
 		r += this.referencias+ "\n";
 		r += this.interpretacion+ "\n";
@@ -44,12 +47,16 @@ public class Tesis extends Escrito{
 	public void setIdea(String idea) {
 		this.idea = idea;
 	}
-	public static ArrayList<String> getArgumentos() {
+
+	
+	public String[] getArgumentos() {
 		return argumentos;
 	}
-	public static void setArgumentos(ArrayList<String> argumentos) {
-		Tesis.argumentos = argumentos;
+
+	public void setArgumentos(String[] argumentos) {
+		this.argumentos = argumentos;
 	}
+
 	public String getConclusion() {
 		return conclusion;
 	}
