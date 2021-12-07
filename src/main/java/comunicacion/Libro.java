@@ -20,7 +20,7 @@ public class Libro extends Escrito{
 	}
 	
 	public String interpretacion() {
-		return interpretacion;
+		return this.interpretacion;
 	}
 	
 	public String toString() {
