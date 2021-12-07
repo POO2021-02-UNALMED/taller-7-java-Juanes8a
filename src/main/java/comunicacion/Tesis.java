@@ -36,7 +36,6 @@ public class Tesis extends Escrito{
 		r += argumentos.length+ "\n";
 		r += this.conclusion+ "\n";
 		r += this.referencias+ "\n";
-		r += this.interpretacion+ "\n";
 		return  r;
 	}
 	

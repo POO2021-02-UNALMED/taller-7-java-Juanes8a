@@ -31,7 +31,7 @@ public class Libro extends Escrito{
 		r += this.co_autor+ "\n";
 		r += this.editorial+ "\n";
 		r += this.edicion+ "\n";
-		r += this.interpretacion+ "\n";
+
 		return  r;
 	}
 	
